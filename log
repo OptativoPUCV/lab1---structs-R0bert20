@@ -3,3 +3,20 @@ Wed 13 Mar 2024 08:57:20 PM UTC:
  tests:  0|7
 total_score: 0/70
 a7a3762
+Wed 13 Mar 2024 09:10:42 PM UTC: 
+ exercises.c | 18 +++++++++++++++---
+ 1 file changed, 15 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:38:18: error: expected expression before ‘)’ token
+   38 |   int *newArr = ()
+      |                  ^
+exercises.c:38:8: error: unused variable ‘newArr’ [-Werror=unused-variable]
+   38 |   int *newArr = ()
+      |        ^~~~~~
+exercises.c:39:16: error: control reaches end of non-void function [-Werror=return-type]
+   39 |   return NULL; }
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+522b246
