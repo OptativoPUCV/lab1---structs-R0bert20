@@ -48,3 +48,17 @@ exercises.c:27:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 c8be6ba
+Wed 13 Mar 2024 09:12:08 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:27:49: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   27 | void reverseArray(int arr[], int size) { return NULL;}
+      |                                                 ^~~~
+exercises.c:27:6: note: declared here
+   27 | void reverseArray(int arr[], int size) { return NULL;}
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+96efb48
