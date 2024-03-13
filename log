@@ -68,3 +68,34 @@ Wed 13 Mar 2024 09:12:42 PM UTC:
  tests:  0|6
 total_score: 10/70
 48b2015
+Wed 13 Mar 2024 09:17:08 PM UTC: 
+ exercises.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:29:18: error: expected expression before ‘)’ token
+   29 |   for (int i = 0;)
+      |                  ^
+exercises.c:30:1: error: expected expression before ‘}’ token
+   30 | }
+      | ^
+exercises.c:29:12: error: unused variable ‘i’ [-Werror=unused-variable]
+   29 |   for (int i = 0;)
+      |            ^
+exercises.c:28:7: error: unused variable ‘temp’ [-Werror=unused-variable]
+   28 |   int temp;
+      |       ^~~~
+exercises.c: In function ‘checkSorted’:
+exercises.c:58:34: error: expected statement before ‘)’ token
+   58 |   for (int i = 0; i < size ; i++))
+      |                                  ^
+exercises.c:60:15: error: ‘i’ undeclared (first use in this function)
+   60 |       if (arr[i] > primerNum) return 1;
+      |               ^
+exercises.c:60:15: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:65:4: error: control reaches end of non-void function [-Werror=return-type]
+   65 |    }
+      |    ^
+cc1: all warnings being treated as errors
+Compilation failed
+9cf1764
