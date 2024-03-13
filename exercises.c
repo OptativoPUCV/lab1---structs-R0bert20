@@ -56,11 +56,13 @@ int checkSorted(int arr[], int size) {
   int primerNum = arr[0];
   for (int i = 0; i < size ; i++){
       if (arr[i] > primerNum) return 1;
+        primerNum = arr[i];
       else if (arr[i] < primerNum) return -1;
+        primerNum = arr[i];
       else return 0;
     }
     
-   }
+  }
 
 /*
 Ejercicio 6: Información de una Biblioteca
