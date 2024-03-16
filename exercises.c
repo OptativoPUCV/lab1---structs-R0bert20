@@ -133,7 +133,7 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
   libro->autor.anioNacimiento = anioNacimiento;
 
   libro->anioPublicacion = anioPublicacion;
-                      }
+  }
 
 /*
 Ejercicio 7: Lista enlazada de números
@@ -151,4 +151,18 @@ typedef struct nodo {
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
-Nodo *crearListaEnlazada(int arr[], int size) { return NULL; }
+Nodo *crearListaEnlazada(int arr[], int size) { 
+Nodo *primero = NULL; 
+
+
+for (int i = size - 1; i >= 0; i--) {
+    Nodo *nuevo = (Nodo *)malloc(sizeof(Nodo));
+    if (nuevo != NULL) {
+        nuevo->numero = arr[i];
+        nuevo->siguiente = primero;
+        primero = nuevo;
+    }
+}
+
+return primero;
+}
