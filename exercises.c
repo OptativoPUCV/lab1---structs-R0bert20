@@ -43,14 +43,15 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   *newSize = 0;
   for (int i = 0; i < size; i++){
     if (arr[i] % 2 == 0 ){
-      newArr = (int*)malloc((*newSize + 1) * sizeof(int));
-      newArr[*newSize] = arr[i];
-      (*newSize)++;
-      
+      newArr = (int*)realloc(newArr, (*newSize + 1) * sizeof(int));
+      if (newArr != NULL) {
+        newArr[*newSize] = arr[i];
+        (*newSize)++;
+      }
     }
   }
-  return newArr; 
-}
+  return newArr;  
+  }
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
