@@ -48,8 +48,9 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
         free(newArr);
         exit(EXIT_FAILURE);
       }
-        strcpy(newArr, temp);)
-        (*newSize)++;
+      newArr = temp;
+      newArr[*newSize] = arr[i];
+      (*newSize)++;
       }
     }
   return newArr;  
