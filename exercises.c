@@ -92,9 +92,8 @@ int checkSorted(int arr[], int size) {
         primerNum = arr[i];
         return -1;
       } 
-      else return 0;
     }
-}
+  }
 
 /*
 Ejercicio 6: Información de una Biblioteca
