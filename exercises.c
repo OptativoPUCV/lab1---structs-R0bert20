@@ -57,7 +57,7 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
 int checkSorted(int arr[], int size) { 
-  int primerNum = arr[0];
+  /*int primerNum = arr[0];
   for (int i = 0; i < size ; i++){
       if (arr[i] > primerNum) 
         primerNum = arr[i];
@@ -69,8 +69,8 @@ int checkSorted(int arr[], int size) {
 
       } 
       else return 0;
-    }
-    
+    }*/
+    return 0;
   }
 
 /*
