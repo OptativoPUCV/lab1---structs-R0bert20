@@ -185,3 +185,32 @@ exercises.c:68:5: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 14fe51e
+Sat 16 Mar 2024 08:04:39 PM UTC: 
+ exercises.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:62:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   62 |       if (arr[i] > primerNum)
+      |       ^~
+exercises.c:64:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   64 |         return 1;
+      |         ^~~~~~
+exercises.c:66:7: error: ‘else’ without a previous ‘if’
+   66 |       else if (arr[i] < primerNum){
+      |       ^~~~
+exercises.c:66:20: error: ‘i’ undeclared (first use in this function)
+   66 |       else if (arr[i] < primerNum){
+      |                    ^
+exercises.c:66:20: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c: At top level:
+exercises.c:74:3: error: expected identifier or ‘(’ before ‘}’ token
+   74 |   }
+      |   ^
+exercises.c: In function ‘checkSorted’:
+exercises.c:72:5: error: control reaches end of non-void function [-Werror=return-type]
+   72 |     }
+      |     ^
+cc1: all warnings being treated as errors
+Compilation failed
+46aa974
