@@ -560,3 +560,40 @@ Sat 16 Mar 2024 08:54:43 PM UTC:
  tests:  0|4
 total_score: 30/70
 e340423
+Sat 16 Mar 2024 08:56:31 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:51:16: error: passing argument 1 of ‘strcpy’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   51 |         strcpy(newArr, temp);)
+      |                ^~~~~~
+      |                |
+      |                int *
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘char * restrict’ but argument is of type ‘int *’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:51:24: error: passing argument 2 of ‘strcpy’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   51 |         strcpy(newArr, temp);)
+      |                        ^~~~
+      |                        |
+      |                        int *
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘const char * restrict’ but argument is of type ‘int *’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:51:30: error: expected statement before ‘)’ token
+   51 |         strcpy(newArr, temp);)
+      |                              ^
+cc1: all warnings being treated as errors
+Compilation failed
+e064198
