@@ -663,3 +663,28 @@ exercises.c:77:28: error: left-hand operand of comma expression has no effect [-
 cc1: all warnings being treated as errors
 Compilation failed
 3d856b1
+Sat 16 Mar 2024 09:19:41 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:74:10: error: ‘i’ undeclared (first use in this function)
+   74 |   for (; i < size1; i++, k++) {
+      |          ^
+exercises.c:74:10: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:74:26: error: ‘k’ undeclared (first use in this function)
+   74 |   for (; i < size1; i++, k++) {
+      |                          ^
+exercises.c:74:24: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   74 |   for (; i < size1; i++, k++) {
+      |                        ^
+exercises.c:77:14: error: ‘j’ undeclared (first use in this function); did you mean ‘jn’?
+   77 |       for (; j < size2; j++, k++) {
+      |              ^
+      |              jn
+exercises.c:77:28: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   77 |       for (; j < size2; j++, k++) {
+      |                            ^
+cc1: all warnings being treated as errors
+Compilation failed
+647ab52
