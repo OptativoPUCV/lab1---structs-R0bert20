@@ -287,3 +287,16 @@ Sat 16 Mar 2024 08:21:36 PM UTC:
  tests:  0|5
 total_score: 20/70
 f62d51c
+Sat 16 Mar 2024 08:22:24 PM UTC: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:43:8: error: ‘newSize’ redeclared as different kind of symbol
+   43 |   int *newSize = 0;
+      |        ^~~~~~~
+exercises.c:41:50: note: previous definition of ‘newSize’ with type ‘int *’
+   41 | int *filterEvenNumbers(int arr[], int size, int *newSize) {
+      |                                             ~~~~~^~~~~~~
+Compilation failed
+ee692ec
