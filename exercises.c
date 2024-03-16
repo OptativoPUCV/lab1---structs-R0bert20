@@ -84,14 +84,15 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) { 
   int primerNum = arr[0];
   for (int i = 0; i < size ; i++){
-      if (arr[i] >= primerNum) {
+      if (primerNum >= arr[i]) {
         primerNum = arr[i];
         return 1;
       }
-      else if (arr[i] <= primerNum){
+      else if (primerNum <= arr[i]){
         primerNum = arr[i];
         return -1;
       } 
+    else return 0;
     }
   }
 
