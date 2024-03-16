@@ -91,11 +91,9 @@ int checkSorted(int arr[], int size) {
       else if (arr[i] <= primerNum){
         primerNum = arr[i];
         return -1;
-
       } 
       else return 0;
     }
-    return 0;
   }
 
 /*
