@@ -753,3 +753,22 @@ exercises.c:50:16: error: ‘temp’ undeclared (first use in this function)
       |                ^~~~
 Compilation failed
 205d74f
+Sat 16 Mar 2024 09:36:07 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:42:31: error: ‘size1’ undeclared (first use in this function); did you mean ‘size’?
+   42 |   int* newArr = (int*)malloc((size1+size2) * sizeof(int));
+      |                               ^~~~~
+      |                               size
+exercises.c:42:31: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:42:37: error: ‘size2’ undeclared (first use in this function); did you mean ‘size’?
+   42 |   int* newArr = (int*)malloc((size1+size2) * sizeof(int));
+      |                                     ^~~~~
+      |                                     size
+exercises.c:50:16: error: ‘temp’ undeclared (first use in this function)
+   50 |       newArr = temp;
+      |                ^~~~
+Compilation failed
+1e23a02
