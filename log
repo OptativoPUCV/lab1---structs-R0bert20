@@ -788,3 +788,9 @@ exercises.c:42:37: error: ‘size2’ undeclared (first use in this function); d
       |                                     size
 Compilation failed
 efdde4b
+Sat 16 Mar 2024 09:36:24 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+total_score: 70/70
+7b65894
