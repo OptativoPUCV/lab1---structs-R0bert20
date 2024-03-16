@@ -94,7 +94,7 @@ int checkSorted(int arr[], int size) {
       } 
       else return 0;
     }
-  }
+  
 
 /*
 Ejercicio 6: Información de una Biblioteca
